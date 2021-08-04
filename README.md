@@ -19,6 +19,10 @@ pip install datetime
 
 To use the tool, cd to the directory that contains your `sort.py` script and then run the script as shown below:
 ```bash
+python sort.py <filename>
+```
+or
+```bash
 python sort.py <filename> <args>
 ```
 
