@@ -1,4 +1,4 @@
-# IP Address Sorting Utility
+# IP Address Sorting Tool
 
 A simple CLI tool for sorting IP addresses numerically
 
