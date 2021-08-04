@@ -6,7 +6,7 @@ A simple CLI tool for sorting IP addresses numerically
 
 ## Installation
 
-Download the `ip_auto_sort` script and
+Download the `sort.py` script and
 use the package manager [pip](https://pip.pypa.io/en/stable/) to install dependencies.
 
 ```bash
@@ -17,7 +17,7 @@ pip install datetime
 
 ## Usage
 
-To use the tool, cd to the directory that contains your `ip_auto_sort` script and then run the script as shown below:
+To use the tool, cd to the directory that contains your `sort.py` script and then run the script as shown below:
 ```bash
 python sort.py <filename> <args>
 ```
