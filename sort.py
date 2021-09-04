@@ -12,21 +12,23 @@ def main():
     parser.add_argument('-o', '--output', action='store_true',
                         help='output results to a file')
     args = parser.parse_args()
-    if args.file:
+
+    def sort():
         with open(sys.argv[1],"r") as f:
             ip_list = [ip.strip() for ip in f]
-        for ip in sorted(ip_list, key = lambda ip: [int(ip) for ip in ip.split(".")] ):
+        sort_ip = sorted(ip_list, key = lambda ip: [int(ip) for ip in ip.split(".")])
+        for ip in sort_ip:
             print(ip)
-    if args.output:
-        with open(sys.argv[1],"r") as f:
-            ip_list = [ip.strip() for ip in f]
-        test = sorted(ip_list, key = lambda ip: [int(ip) for ip in ip.split(".")])
-        with open('output' + current_date + '.txt', 'w') as i:
-            for ip in test:
-                i.writelines('%s\n' % ip)
-    if len(sys.argv) > 3:
-        print('Invalid input use -h for help')
-        sys.exit()
+        if args.output:
+            with open('output' + current_date + '.txt', 'w') as i:
+                for ip in sort_ip:
+                    i.writelines('%s\n' % ip)
+        if len(sys.argv) > 3:
+            print('Invalid input use -h for help')
+            sys.exit()
+    
+    if args.file:
+        sort()
 
 if __name__=='__main__':
     main()
